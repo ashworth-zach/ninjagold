@@ -1,0 +1,12 @@
+.scrollbox{
+    height:300px;
+    width:80%;
+    overflow:auto;
+    border:8px solid darkgray;
+    padding:2%;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+.jumbotron{
+    color: white;
+}

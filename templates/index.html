@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="jumbotron text-center bg-dark">
+        <h1>NINJA GOLD</h1>
+        <p>total gold {{gold}}</p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <h1>farm</h1>
+                <p>(earns 10-20 gold)</p>
+                <form action="/process_money" method="post">
+                    <input type="hidden" name="farm" value="farm" />
+                    <input type="submit" value="search farm for gold" />
+                </form>
+            </div>
+            <div class="col-sm-3">
+                <h1>cave</h1>
+                <p>(earns 5-10 gold)</p>
+                <form action="/process_money" method="post">
+                    <input type="hidden" name="cave" value="cave" />
+                    <input type="submit" value="search cave for gold" />
+                </form>
+            </div>
+            <div class="col-sm-3">
+                <h1>house</h1>
+                <p>(earns 2-5 gold)</p>
+                <form action="/process_money" method="post">
+                    <input type="hidden" name="house" value="house" />
+                    <input type="submit" value="search house for gold" />
+                </form>
+            </div>
+            <div class="col-sm-3">
+                <h1>casino</h1>
+                <p>(earns/takes 0-50 gold)</p>
+                <form action="/process_money" method="post">
+                    <input type="hidden" name="casino" value="casino" />
+                    <input type="submit" value="Go To Casino!" />
+                </form>
+            </div>
+            <div class="scrollbox">
+                {{message|safe}}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
