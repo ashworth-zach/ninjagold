@@ -10,3 +10,13 @@
 .jumbotron{
     color: white;
 }
+.activitylist{
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+.redtext{
+    color:red;
+}
+.greentext{
+    color: green;
+}
